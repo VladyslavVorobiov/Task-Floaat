@@ -1,0 +1,24 @@
+@import "./mixins.scss";
+@import "./element-animation.scss";
+@import "./firstPage.scss";
+@import "./pageClients.scss";
+@import "./styleForScripts.scss";
+
+// === Variables ===
+$heightAllScreen: 100vh;
+$widthAllScreen: 100vw;
+$colorFloaat: #D2132A;
+// === /Variables ===
+
+// === Common ===
+.floaat-logo{
+    @include logo-floaat;
+}
+// === /Common ===
+
+// === First Page ===
+// === /First Page ===
+
+// === Page Clients ===
+// === /Page Clients ===
+

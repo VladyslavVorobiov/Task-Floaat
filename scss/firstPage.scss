@@ -1,0 +1,173 @@
+@import "./mixins.scss";
+@import "./element-animation.scss";
+// === Variables ===
+$heightAllScreen: 100vh;
+$widthAllScreen: 100vw;
+// === /Variables ===
+
+// === First Page ===
+.section-firstPage {
+    height: $heightAllScreen;
+    width: $widthAllScreen;
+    position: relative;
+    background: radial-gradient(48.18% 24.84% at 50% 50%, #2A0227 0%, #170119 100%);
+    overflow: hidden;
+    perspective: 80vw;
+    transform-style: preserve-3d;
+    
+    header{
+        position: relative;
+        @include header(#FFEFF6,none);
+        z-index: 2;
+    }
+    .element-oval{
+        @include position(absolute, -16vh, 9vw);
+        width: 85vw;
+        height: 132vh;
+        background: radial-gradient(50% 33% at 50% 50%, rgba(255, 125, 150, 0.287806) 0%, rgba(245, 64, 137, 4e-05) 100%);
+        opacity: 0.75;
+    }
+    .practice-by-sze{
+        @include font-parameters('Archivo', 12px, 13px, #F9A608);
+        text-transform: uppercase;
+        @include position-horizontal-center(30.5%);
+    }
+    .creative{
+        @include header-creative;
+        @include position(absolute, 32%, 17%);
+
+        @media screen and (max-width:520px) {
+            font-size: 14vw;
+        }
+    }
+    .content-has-reached{
+        @include font-parameters('Archivo', 14px, 15px, #643C5A);
+        @include position-horizontal-center(82.87%);
+    }
+    .text-count-viewers{
+        @include font-parameters('Archivo', 30px, 33px, #F6F6F6);
+        @include position-horizontal-center(87.12%);
+    }
+    .viewers{
+        @include font-parameters('Archivo', 14px, 15px, #F6F6F6);
+        text-transform: uppercase;
+        @include position-horizontal-center(91.37%);
+    }
+    .image-for-you{
+        @include image-for-you;
+        @include position(absolute, 36vh, 26vw);
+        //@include position-horizontal-center(54%);
+    }
+    .image-lettering-copy2{
+        @include position(absolute, 25.25vh, 12vw);
+        width: 3.5vw;
+        animation: animation-image-lettering-copy2 5s linear infinite normal;
+        @media screen and (max-width:860px) {
+            @include position(absolute, 27%, 12%);
+        }
+        @media screen and (max-width:560px) {
+            @include position(absolute, 30%, 12%);
+        }
+    }
+    .image-headphone-jd{
+        @include position(absolute, 12.7vh, 14.5vw);
+        width: 12.7vw;
+        animation: animation-image-headphone-jd 5s ease-out infinite alternate;
+        @media screen and (max-width:860px) {
+            @include position(absolute, 17%, 16%);
+        }
+        @media screen and (max-width:560px) {
+            @include position(absolute, 25%, 16%);
+        }
+    }
+    .image-torus3{
+        @include position(absolute, 13vh, 50.5vw);
+        width: 8vw;
+        animation: animation-image-torus3 3s linear infinite alternate;
+        @media screen and (max-width:860px) {
+            @include position(absolute, 20%, 50.5%);
+        }
+        @media screen and (max-width:560px) {
+            @include position(absolute, 25%, 50.5%);
+        }
+    }
+    .image-youtube-firstPage{
+        @include position(absolute, 3vh, 67vw); //3%, 67%);
+        width: 17.36vw;
+        animation: animation-image-youtube-firstPage 8s linear infinite normal;
+        @media screen and (max-width:900px) {
+            @include position(absolute, 13%, 67%);
+        }
+        @media screen and (max-width:560px) {
+            @include position(absolute, 23%, 67%);
+        }
+    }
+    .image-claqueta-firstPage{
+        @include position(absolute, 50vh, 72vw);
+        width: 18.75vw;
+        animation: animation-image-claqueta 7s linear infinite normal;
+        @media screen and (max-width:860px) {
+            @include position(absolute, 43%, 72%);
+        }
+        @media screen and (max-width:560px) {
+            @include position(absolute, 40%, 76%);
+        }
+    }
+    .image-lettering-copy{
+        @include position(absolute, 40vh, 89vw);
+        opacity: 0.9;
+        width: 5vw;
+        animation: animation-image-lettering-copy 7s linear infinite normal;
+        @media screen and (max-width:860px) {
+            @include position(absolute, 35%, 90%);
+        }
+        @media screen and (max-width:560px) {
+            @include position(absolute, 28%, 86%);
+        }
+    }
+    .image-torus{
+        @include position(absolute, 72.5vh, 80.5vw);
+        width: 11.9vw;
+        animation: animation-image-torus 5s linear infinite normal;
+        @media screen and (max-width:860px) {
+            @include position(absolute, 60%, 78%);
+        }
+        @media screen and (max-width:560px) {
+            @include position(absolute, 48%, 76%);
+        }
+    }
+    .image-heart{
+        @include position(absolute, 70vh, 62vw);
+        width: 7.7vw;
+        animation: animation-image-heart 2.5s linear infinite alternate;
+        @media screen and (max-width:860px) {
+            @include position(absolute, 50%, 62%);
+        }
+        @media screen and (max-width:560px) {
+            @include position(absolute, 47%, 62%);
+        }
+    }
+    .image-note{
+        @include position(absolute, 80vh, 24vw);
+        width: 8vw;
+        animation: animation-image-note 6s linear infinite normal;
+        @media screen and (max-width:860px) {
+            @include position(absolute, 60%, 25%);
+        }
+        @media screen and (max-width:560px) {
+            @include position(absolute, 50%, 25%);
+        }
+    }
+    .image-camera{
+        @include position(absolute, 53vh, 4.5vw);
+        width: 19vw;
+        animation: animation-image-camera 3s linear infinite alternate;
+        @media screen and (max-width:860px) {
+            @include position(absolute, 45%, 5%);
+        }
+        @media screen and (max-width:560px) {
+            @include position(absolute, 40%, 5%);
+        }
+    }
+}
+// === /First Page ===

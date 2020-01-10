@@ -1,0 +1,94 @@
+@import "./mixins.scss";
+// === Variables ===
+$heightAllScreen: 100vh;
+$widthAllScreen: 100vw;
+// === /Variables ===
+
+// === Page Clients ===
+.section-clients{
+    position: relative;
+    background: #FFECEE;
+
+    .img-sphere-yellow{
+        @include position(absolute, 57%, -60%);
+        z-index: 2;
+    }
+    .img-torus-yellow{
+        @include position(absolute, -20%, -86%);
+        z-index: 2;
+    }
+    .img-youtube-small{
+        @include position(absolute, 0, 52%);
+        z-index: 2;
+        @media screen and (max-width:1150px) {
+            @include position(absolute, 0, -60%);
+        }
+    }
+    header{
+        @include header(#161415,#FFFFFF);
+    }
+
+    .wrapper-clients-info{
+        padding-left: 4vw;
+        .clients-info{
+            padding-left: 0;
+        
+            .column-clients-info{
+                padding-top: 3%;
+                margin-bottom: 5vh;
+            }
+            .amount-clients{
+                @include font-parameters(Archivo Black, 40px, 40px, #383030);
+                text-transform: uppercase;
+            }
+            .we-work{
+                @include font-parameters(Archivo, 16px, 26px, #643C5A);
+                opacity: 0.5;
+            }
+            .button-view-all{
+                @include font-parameters(Archivo Black, 12px, 26px,#D2132A);
+                padding: 0;
+                text-transform: uppercase;
+                background: none;
+                border: none;
+                z-index: 5;
+            }
+        }
+
+        .column-clients-photo{
+            .item-clients-photo{
+                display: inline-block;
+                vertical-align:top;
+                margin-right: 2%;
+                figure{
+                    position: relative;
+                    margin-bottom: 5.6vh;
+                    p{
+                        border-radius: 5px;
+                    }
+                }
+                & img{
+                    border-radius: 5px;
+                }
+                figcaption{
+                    @include font-parameters(Archivo, 16px, 17px, #383030);
+                }
+                .image-popjam{
+                    @include img-popjam-juice(#000000);
+                }
+                .image-juice{
+                    @include img-popjam-juice(#DA89C6);
+                }
+            }
+            .item-clients-photo:nth-child(2){
+                margin-top: 8%;
+            }
+            @media screen and (max-width:520px) {
+                margin-left: 20vw;
+            }
+        }
+
+    }
+    
+}
+// === /Page Clients ===
