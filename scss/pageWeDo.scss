@@ -1,0 +1,111 @@
+@import "./mixins.scss";
+@import "./element-animation.scss";
+
+// === Variables ===
+$heightAllScreen: 100vh;
+$widthAllScreen: 100vw;
+// === /Variables ===
+
+// === Page We do ===
+.section-we-do{
+    height: $heightAllScreen;
+    width: $widthAllScreen;
+    position: relative;
+    background: #170119;
+    
+    header{
+        position: relative;
+        @include header(#FFEFF6,none);
+    }
+
+    .container-we-do{
+        padding-left: 4vw;
+        margin-top: 14vh;
+
+        .column-we-do-cards{
+            .header-we-do{
+                @include font-parameters(Archivo Black, 40px, 40px, #FFFFFF);
+                text-transform: uppercase;
+            }
+
+            .container-cards{
+                margin-top: 4.75vh;
+                .row-container-cards{
+                    display: flex;
+                    margin: 0;
+                    padding: 0;
+                    .item-container-cards{
+                        display: inline-block;
+                        width: 12vw;
+                        height: 12vw;
+                        @include align-in-my-center;
+                        background: rgba(100, 60, 90, 0.2);
+                        border-radius: 12px;
+                        margin-right: 1vh;
+                        margin-bottom: 1vh;
+                        
+                        img{
+                            width: 15vw;
+                        }
+                        &:hover{
+                            background:#DD051F;
+                            transition: 0.8s ease-in-out;
+                        }
+                    }
+                }
+                
+            }
+            
+        }
+
+        .column-we-do-actions{
+            @include align-in-my-center;
+            position: relative;
+            overflow: hidden;
+
+            .wedo-element-oval{
+                position: absolute;
+                width: 44vw;
+                height: 84vh;
+                background: radial-gradient(33.5% 27.76% at 50% 50%, rgba(255, 125, 150, 0.287806) 0%, rgba(245, 64, 137, 4e-05) 100%);
+                opacity: 0.7;
+                z-index: 1;
+            }
+            .container-text{
+                position: absolute;
+                z-index: 3;
+                .paragraph-we-do-actions{
+                    display: block;
+                    @include font-parameters(Archivo, 2.5vw, 3.19vw, #FFFFFF); //2.5vw, 3.19vw //36px, 46px
+                    font-weight: 600;
+                    text-align: center;
+                    width: 25vw;
+                }
+                .link-learn-more{
+                    display: block;
+                    @include font-parameters(Archivo Black, 12px, 26px, #D2132A);
+                    text-align: center;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                }
+            }
+            .image-we-do-actions{
+                width: 30vw;
+                z-index: 2;
+            }
+            .img-wedo-lettering-copy-2{
+                width: 3.5vw;
+                @include position(absolute, 5%, 16%);
+            }
+            .image-wedo-lettering-copy{
+                width: 5vw;
+                @include position(absolute, 10%, 75%);
+            }
+            .image-wedo-heart{
+                width: 7.7vw;
+                @include position(absolute, 75%, 17%);
+            }
+        }
+    }
+}
+// === Page We do ===

@@ -109,20 +109,6 @@
     top: 80vh;
     left: 24vw; } }
 
-@keyframes animation-image-note {
-  0% {
-    top: 80vh;
-    left: 24vw; }
-  25% {
-    top: 82vh;
-    left: 24.5vw; }
-  75% {
-    top: 81vh;
-    left: 25vw; }
-  100% {
-    top: 80vh;
-    left: 24vw; } }
-
 @keyframes animation-image-camera {
   0% {
     top: 53vh;
@@ -239,6 +225,9 @@
     height: 132vh;
     background: radial-gradient(50% 33% at 50% 50%, rgba(255, 125, 150, 0.287806) 0%, rgba(245, 64, 137, 4e-05) 100%);
     opacity: 0.75; }
+    @media screen and (max-width: 860px) {
+      .section-firstPage .element-oval {
+        height: 100vh; } }
   .section-firstPage .practice-by-sze {
     font-family: "Archivo";
     font-size: 12px;
@@ -260,7 +249,8 @@
     color: #FFEFF6;
     position: absolute;
     top: 32%;
-    left: 17%; }
+    left: 17%;
+    z-index: 3; }
     @media screen and (max-width: 520px) {
       .section-firstPage .creative {
         font-size: 14vw; } }
@@ -299,7 +289,8 @@
     width: 51.8vw;
     position: absolute;
     top: 36vh;
-    left: 26vw; }
+    left: 26vw;
+    z-index: 3; }
   .section-firstPage .image-lettering-copy2 {
     position: absolute;
     top: 25.25vh;
@@ -444,7 +435,21 @@
       .section-firstPage .image-note {
         position: absolute;
         top: 50%;
-        left: 25%; } }
+        left: 25%;
+        animation: animation-image-note-adaptive 6s linear infinite normal; }
+      @keyframes animation-image-note-adaptive {
+        0% {
+          top: 50%;
+          left: 25%; }
+        25% {
+          top: 52%;
+          left: 24.5%; }
+        75% {
+          top: 51%;
+          left: 25%; }
+        100% {
+          top: 50%;
+          left: 24%; } } }
   .section-firstPage .image-camera {
     position: absolute;
     top: 53vh;

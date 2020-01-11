@@ -1,0 +1,49 @@
+@import "./mixins.scss";
+@import "./element-animation.scss";
+
+// === Variables ===
+$heightAllScreen: 100vh;
+$widthAllScreen: 100vw;
+$colorFloaat: #D2132A;
+// === /Variables ===
+
+// === Page Our team ===
+.section-our-team{
+    height: $heightAllScreen;
+    width: $widthAllScreen;
+    position: relative;
+    background: #FFECEE;
+    
+    header{
+        @include header(#161415,#FFFFFF);
+    }
+
+    footer{
+        //@include align-in-my-center;
+        position: relative;
+        background: #170119;
+        width: 100vw;
+        height: 18.75vh;
+        box-sizing: border-box;
+        .contuct-us{
+            @include font-parameters(Archivo,32px, 46px, #FFFFFF );
+            width: 30vw;
+            margin: 5vh auto 0;
+            text-align: center;
+            border: 1px solid white;
+            @include position-horizontal-center(2vh);
+        }
+        .copyright{
+            position: relative;
+            p{
+                @include font-parameters(Archivo, 14px, 26px, #FFFFFF );
+                margin: 5vh auto 0;
+                text-align: center;
+                border: 1px solid white;
+                @include position-horizontal-center(10vh);
+            }
+        }
+    }
+}
+// === /Page Our team ===
+

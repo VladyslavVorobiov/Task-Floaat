@@ -87,6 +87,18 @@ var myApp =
 /************************************************************************/
 /******/ ({
 
+/***/ "./scripts/changeOnPageWeDo.js":
+/*!*************************************!*\
+  !*** ./scripts/changeOnPageWeDo.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return handlerToChangeOnPageWeDo; });\nfunction handlerToChangeOnPageWeDo(){\n\n    const arrayOfCards = document.querySelectorAll('.item-container-cards');\n    arrayOfCards.forEach((item) => item.addEventListener('click', listenerItemCardClick) );\n    \n    function listenerItemCardClick(event){\n        const matchCardToText = {\n            \"image-gear-red-wedo\": \"Channel Operation and Management\",\n            \"image-stars-small\": \"Creative Services for Influencers\",\n            \"image-graphik-small\": \"Graphic Design & Photography\",\n            \"image-lupa-small\": \"Business Development\",\n            \"image-hlopushka-small\": \"Lyric Videos & Animation\",\n            \"image-headphone-small\": \"Brand Campaigns\",\n        };\n        const matchCardToImg = {\n            \"image-gear-red-wedo\": \"./img/bigIcons/gear2.png\",\n            \"image-stars-small\": \"./img/bigIcons/star_big.png\",\n            \"image-graphik-small\": \"./img/bigIcons/graphik_big.png\",\n            \"image-lupa-small\": \"./img/bigIcons/Lupa_big.png\",\n            \"image-hlopushka-small\": \"./img/bigIcons/CLAQUETA_basica.png\",\n            \"image-headphone-small\": \"./img/bigIcons/Headphone_JD.png\",\n        };\n\n        const paragraphWeDoActions = document.querySelector('.paragraph-we-do-actions');\n        const imgWeDoActions = document.querySelector('.image-we-do-actions');\n\n        paragraphWeDoActions.textContent = matchCardToText[event.target.className];\n        imgWeDoActions.src = matchCardToImg[event.target.className];\n    }\n}\n\n//# sourceURL=webpack://myApp/./scripts/changeOnPageWeDo.js?");
+
+/***/ }),
+
 /***/ "./scripts/index.js":
 /*!**************************!*\
   !*** ./scripts/index.js ***!
@@ -95,7 +107,7 @@ var myApp =
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _rotateImgFirstPage_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./rotateImgFirstPage.js */ \"./scripts/rotateImgFirstPage.js\");\n\n\nwindow.addEventListener(\"load\", mainScript);\n\nfunction mainScript(){\n    Object(_rotateImgFirstPage_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n}\n\n\n//# sourceURL=webpack://myApp/./scripts/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _rotateImgFirstPage_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./rotateImgFirstPage.js */ \"./scripts/rotateImgFirstPage.js\");\n/* harmony import */ var _changeOnPageWeDo_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./changeOnPageWeDo.js */ \"./scripts/changeOnPageWeDo.js\");\n\n\n\nwindow.addEventListener(\"load\", mainScript);\n\nfunction mainScript(){\n    Object(_rotateImgFirstPage_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n    Object(_changeOnPageWeDo_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n}\n\n\n//# sourceURL=webpack://myApp/./scripts/index.js?");
 
 /***/ }),
 

@@ -26,6 +26,9 @@ $widthAllScreen: 100vw;
         height: 132vh;
         background: radial-gradient(50% 33% at 50% 50%, rgba(255, 125, 150, 0.287806) 0%, rgba(245, 64, 137, 4e-05) 100%);
         opacity: 0.75;
+        @media screen and (max-width:860px) {
+            height: 100vh;
+        }
     }
     .practice-by-sze{
         @include font-parameters('Archivo', 12px, 13px, #F9A608);
@@ -35,6 +38,7 @@ $widthAllScreen: 100vw;
     .creative{
         @include header-creative;
         @include position(absolute, 32%, 17%);
+        z-index:3;
 
         @media screen and (max-width:520px) {
             font-size: 14vw;
@@ -56,6 +60,7 @@ $widthAllScreen: 100vw;
     .image-for-you{
         @include image-for-you;
         @include position(absolute, 36vh, 26vw);
+        z-index:3;
         //@include position-horizontal-center(54%);
     }
     .image-lettering-copy2{
@@ -151,11 +156,19 @@ $widthAllScreen: 100vw;
         @include position(absolute, 80vh, 24vw);
         width: 8vw;
         animation: animation-image-note 6s linear infinite normal;
+
         @media screen and (max-width:860px) {
             @include position(absolute, 60%, 25%);
         }
         @media screen and (max-width:560px) {
             @include position(absolute, 50%, 25%);
+            animation: animation-image-note-adaptive 6s linear infinite normal;
+            @keyframes animation-image-note-adaptive{
+                0%  { top: 50%; left: 25%; }
+                25%  { top: 52%; left: 24.5%; }
+                75%  { top: 51%; left: 25%; }
+                100% { top: 50%; left: 24%; }
+            }
         }
     }
     .image-camera{

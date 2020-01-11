@@ -109,20 +109,6 @@
     top: 80vh;
     left: 24vw; } }
 
-@keyframes animation-image-note {
-  0% {
-    top: 80vh;
-    left: 24vw; }
-  25% {
-    top: 82vh;
-    left: 24.5vw; }
-  75% {
-    top: 81vh;
-    left: 25vw; }
-  100% {
-    top: 80vh;
-    left: 24vw; } }
-
 @keyframes animation-image-camera {
   0% {
     top: 53vh;
