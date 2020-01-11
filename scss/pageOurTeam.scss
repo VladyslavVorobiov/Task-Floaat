@@ -1,11 +1,6 @@
+@import "./variables.scss";
 @import "./mixins.scss";
 @import "./element-animation.scss";
-
-// === Variables ===
-$heightAllScreen: 100vh;
-$widthAllScreen: 100vw;
-$colorFloaat: #D2132A;
-// === /Variables ===
 
 // === Page Our team ===
 .section-our-team{
@@ -18,30 +13,103 @@ $colorFloaat: #D2132A;
         @include header(#161415,#FFFFFF);
     }
 
+    .header-our-team{
+        @include font-parameters(Archivo Black,40px,40px, #383030);
+        text-align: center;
+        text-transform: uppercase;
+    }
+    .our-team-slides{
+        text-align: center;
+        margin-top: 5.2vh;
+        .button-previous, .button-next{
+            @include font-parameters(Archivo, 12px, 13px, #161415);
+            text-transform: uppercase;
+            font-weight: bold;
+            border: none;
+            background: none;
+        }
+        .container-photo-team{
+            display: inline-flex;
+            justify-content: center;
+
+            p{
+                position: relative;
+                @media screen and (max-width:460px) {
+                    display: inline-block;
+                }
+            }
+            .img-sphere-red-page-team{
+                width:14vw;
+                z-index: 3;
+                @include position(absolute, 80%, -40%);
+                @media screen and (max-width:460px) {
+                    @include position(absolute, 90%, -20%);
+                }
+            }
+            .img-note-page-team{
+                width: 21vw;
+                z-index: 3;
+                @include position(absolute, -32%, 48%);
+                @media screen and (max-width:460px) {
+                    @include position(absolute, -25%, -30%);
+                }
+            }
+            .img-torus-yellow-page-team{
+                z-index: 2;
+                width: 20vw;
+                @include position(absolute, 115%, 38%);
+            }
+            img{
+                width: 19.2vw;
+                border-radius: 10px;
+                margin: 0 1vw;
+                @media screen and (max-width:460px) {
+                    width: 30vw;
+                }
+            }
+            @media screen and (max-width:460px) {
+                display: block;
+                margin-top: 2vh;
+            }
+        }
+
+        @media screen and (max-width:760px) {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
     footer{
-        //@include align-in-my-center;
-        position: relative;
+        position: absolute;
+        top: 81.25vh;
         background: #170119;
         width: 100vw;
         height: 18.75vh;
         box-sizing: border-box;
-        .contuct-us{
-            @include font-parameters(Archivo,32px, 46px, #FFFFFF );
-            width: 30vw;
-            margin: 5vh auto 0;
+
+        .container-contact-us{
             text-align: center;
-            border: 1px solid white;
-            @include position-horizontal-center(2vh);
-        }
-        .copyright{
-            position: relative;
-            p{
-                @include font-parameters(Archivo, 14px, 26px, #FFFFFF );
+                
+            .paragraph-contact-us{
+                display: inline-block;
+                @include font-parameters(Archivo,32px, 46px, #FFFFFF );
                 margin: 5vh auto 0;
                 text-align: center;
-                border: 1px solid white;
-                @include position-horizontal-center(10vh);
             }
+        }
+        
+        .copyright{
+            display: flex;
+            justify-content: space-between;
+            margin:0 3.8vw;
+            p{
+                @include font-parameters(Archivo, 14px, 26px, #FFFFFF );
+                margin-top: 2vh;
+                
+            }
+        }
+        @media screen and (max-width:1150px) {
+            height: 20.75vh;
         }
     }
 }

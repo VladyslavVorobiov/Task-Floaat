@@ -129,7 +129,7 @@
       padding: 0; }
       .section-we-do header .container-fluid .contact-us {
         display: flex;
-        justify-content: right; }
+        justify-content: flex-end; }
         .section-we-do header .container-fluid .contact-us .link-contact-us {
           position: relative;
           display: inline-block;
@@ -176,8 +176,8 @@
           display: inline-block; }
           .section-we-do header .container-fluid .contact-us .menu-dots .dot-1, .section-we-do header .container-fluid .contact-us .menu-dots .dot-2, .section-we-do header .container-fluid .contact-us .menu-dots .dot-3, .section-we-do header .container-fluid .contact-us .menu-dots .dot-4 {
             position: absolute;
-            width: 7.5px;
-            height: 7.5px;
+            width: 8px;
+            height: 8px;
             background-color: #D2132A;
             border-radius: 50%; }
           .section-we-do header .container-fluid .contact-us .menu-dots .dot-1 {

@@ -1,9 +1,6 @@
+@import "./variables.scss";
 @import "./mixins.scss";
 @import "./element-animation.scss";
-// === Variables ===
-$heightAllScreen: 100vh;
-$widthAllScreen: 100vw;
-// === /Variables ===
 
 // === First Page ===
 .section-firstPage {

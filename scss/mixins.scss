@@ -1,3 +1,4 @@
+@import "./variables.scss";
 // === Mixins ===
     @mixin header($button-color, $menu-dots-background-color){
     padding: 4vh 4vw 0;
@@ -6,7 +7,7 @@
 
             .contact-us{
                 display: flex;
-                justify-content: right;
+                justify-content: flex-end;
 
                 .link-contact-us{
                     position: relative;
@@ -74,8 +75,8 @@
         display: inline-block;
         .dot-1, .dot-2, .dot-3, .dot-4{
             position: absolute;
-            width: 7.5px;
-            height: 7.5px;
+            width: 8px;
+            height: 8px;
             background-color: #D2132A;
             border-radius: 50%;
         }
