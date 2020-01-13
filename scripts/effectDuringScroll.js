@@ -12,8 +12,8 @@ export default function effectDuringScroll(){
     function createEffectForPages(){
         const pageFirst = document.querySelector('.section-firstPage');
         const pageWedo = document.querySelector('.section-we-do');
-        const pageTeam = document.querySelector('.section-our-team');
-        const arrayOfSections = [pageFirst, pageWedo, pageTeam];
+        //const pageTeam = document.querySelector('.section-our-team');
+        const arrayOfSections = [pageFirst, pageWedo]; //, pageTeam
    
         arrayOfSections.forEach((item) => {
             new ScrollMagic.Scene({

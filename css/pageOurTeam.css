@@ -230,7 +230,8 @@
       text-transform: uppercase;
       font-weight: bold;
       border: none;
-      background: none; }
+      background: none;
+      z-index: 5; }
     .section-our-team .our-team-slides .container-photo-team {
       display: inline-flex;
       justify-content: center; }
@@ -262,7 +263,7 @@
             top: -25%;
             left: -30%; } }
       .section-our-team .our-team-slides .container-photo-team .img-torus-yellow-page-team {
-        z-index: 2;
+        z-index: 3;
         width: 20vw;
         position: absolute;
         top: 115%;
@@ -288,9 +289,15 @@
     background: #170119;
     width: 100vw;
     height: 18.75vh;
-    box-sizing: border-box; }
+    box-sizing: border-box;
+    transition-property: background;
+    transition-duration: 0.5s;
+    transition-timing-function: linear; }
+    .section-our-team footer:hover {
+      background: #DD041F; }
     .section-our-team footer .container-contact-us {
-      text-align: center; }
+      text-align: center;
+      z-index: 4; }
       .section-our-team footer .container-contact-us .paragraph-contact-us {
         display: inline-block;
         font-family: Archivo;
@@ -298,7 +305,10 @@
         line-height: 46px;
         color: #FFFFFF;
         margin: 5vh auto 0;
-        text-align: center; }
+        text-align: center;
+        z-index: 4; }
+        .section-our-team footer .container-contact-us .paragraph-contact-us img {
+          z-index: 4; }
     .section-our-team footer .copyright {
       display: flex;
       justify-content: space-between;
@@ -308,7 +318,8 @@
         font-size: 14px;
         line-height: 26px;
         color: #FFFFFF;
-        margin-top: 2vh; }
+        margin-top: 2vh;
+        z-index: 3; }
     @media screen and (max-width: 1150px) {
       .section-our-team footer {
         height: 20.75vh; } }
