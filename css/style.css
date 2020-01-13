@@ -587,6 +587,7 @@
         left: 5%; } }
 
 .section-clients {
+  width: 100vw;
   position: relative;
   background: #FFECEE; }
   .section-clients .img-sphere-yellow {
@@ -762,6 +763,7 @@
       margin-top: 8%; }
     @media screen and (max-width: 520px) {
       .section-clients .wrapper-clients-info .column-clients-photo {
+        margin-top: 30vh;
         margin-left: 20vw; } }
 
 @keyframes animation-image-headphone-jd {
@@ -1331,7 +1333,7 @@
         width: 20vw;
         position: absolute;
         top: 115%;
-        left: 38%; }
+        left: 35%; }
       .section-our-team .our-team-slides .container-photo-team img {
         width: 19.2vw;
         border-radius: 10px;
@@ -1378,14 +1380,17 @@
       .section-our-team footer {
         height: 20.75vh; } }
 
-.perspective50vh {
-  perspective: 200px; }
+.margin-left-column-clients-photo {
+  margin-left: 32.25vw; }
 
-/*
-$heightAllScreen: 100vh;
-$widthAllScreen: 100vw;
-$colorFloaat: #D2132A;
-*/
+.to-fix-column-clients-info {
+  position: fixed;
+  top: 10.5vh;
+  left: 3vw; }
+
+body {
+  overflow-x: hidden; }
+
 .floaat-logo {
   font-family: 'Archivo', sans-serif;
   font-size: 26px;

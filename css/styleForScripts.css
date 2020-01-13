@@ -1,2 +1,7 @@
-.perspective50vh {
-  perspective: 200px; }
+.margin-left-column-clients-photo {
+  margin-left: 32.25vw; }
+
+.to-fix-column-clients-info {
+  position: fixed;
+  top: 10.5vh;
+  left: 3vw; }

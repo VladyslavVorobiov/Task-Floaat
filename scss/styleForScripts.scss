@@ -1,4 +1,8 @@
+@import "./mixins.scss";
 
-.perspective50vh{
-    perspective: 200px;
-}
+.margin-left-column-clients-photo{
+    margin-left: 32.25vw;
+ }
+ .to-fix-column-clients-info{
+     @include position(fixed, 10.5vh, 3vw);
+ }

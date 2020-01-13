@@ -7,13 +7,10 @@
 @import "./pageOurTeam.scss";
 @import "./styleForScripts.scss";
 
-/*
-$heightAllScreen: 100vh;
-$widthAllScreen: 100vw;
-$colorFloaat: #D2132A;
-*/
-
 // === Common ===
+body{
+    overflow-x:hidden;
+}
 .floaat-logo{
     @include logo-floaat;
 }
@@ -30,4 +27,3 @@ $colorFloaat: #D2132A;
 
 // === Page Our team ===
 // === /Page Our team ===
-

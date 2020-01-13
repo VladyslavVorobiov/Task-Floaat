@@ -3,6 +3,7 @@
 
 // === Page Clients ===
 .section-clients{
+    width: $widthAllScreen;
     position: relative;
     background: #FFECEE;
 
@@ -81,6 +82,7 @@
                 margin-top: 8%;
             }
             @media screen and (max-width:520px) {
+                margin-top: 30vh;
                 margin-left: 20vw;
             }
         }
