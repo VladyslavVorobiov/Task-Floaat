@@ -3,13 +3,16 @@ export default function preloaderPageEffects(){
     const preloaderPage = document.querySelector(".preloader");
     const imagePreloader = document.querySelector(".image-preloader");
 
-    setTimeout( () => imagePreloader.src = "./img/icons/Headphone_JD.png", 300);
-    setTimeout( () => imagePreloader.src = "./img/icons/star_big.png", 600);
-    setTimeout( hidePreloader , 800);
+    document.body.style.overflow = 'hidden';
 
-    function hidePreloader(){
+    setTimeout( () => imagePreloader.src = "./img/icons/Headphone_JD.png", 400);
+    setTimeout( () => imagePreloader.src = "./img/icons/star_big.png", 800);
+    setTimeout( hidePreloaderAndTurnOnScroll , 1000);
+
+    function hidePreloaderAndTurnOnScroll(){
         TweenLite.to(preloaderPage, 1, {
             height:"0"
         });
+        document.body.style.overflow = 'visible';
     }
 }
