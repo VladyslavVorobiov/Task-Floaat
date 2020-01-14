@@ -1,6 +1,7 @@
 @import "./variables.scss";
 @import "./mixins.scss";
 @import "./element-animation.scss";
+@import "./pagePreloader.scss";
 @import "./firstPage.scss";
 @import "./pageClients.scss";
 @import "./pageWeDo.scss";
@@ -15,6 +16,9 @@ body{
     @include logo-floaat;
 }
 // === /Common ===
+
+// === Page Preloader ===
+// === /Page Preloader ===
 
 // === First Page ===
 // === /First Page ===

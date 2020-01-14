@@ -4,8 +4,8 @@ export default function handlerToRotateImagesOnFirstPage(){
     const textCreative = document.querySelector('.creative');
     const imageForYou = document.querySelector('.image-for-you');
 
-    const MAX_ANGLE = 15;
-    const TRANSITION_DURATION = 0.5;
+    const MAX_ANGLE = 10;
+    const TRANSITION_DURATION = 0.7;
     const CENTER_BOTTOM = "center bottom";
     const CENTER_TOP = "center top";
     const currentWidthDevice = document.documentElement.clientWidth;
