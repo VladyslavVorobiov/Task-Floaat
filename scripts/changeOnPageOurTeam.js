@@ -15,7 +15,7 @@ export default function handlerOnPageOurTeam(){
     let previousViewPhotosTeam = sourcePhotosTeam.concat();
 
     const arrayOfButton = [buttonPrev, buttonNext];
-    
+
     //arrayOfButton.forEach((item) => item.addEventListener("click", listenerButtonsSlides));
     footerPageOurTeam.addEventListener('mouseenter', listenerMouseOverFooter);
     footerPageOurTeam.addEventListener('mouseleave', listenerMouseOutFooter);
@@ -23,13 +23,13 @@ export default function handlerOnPageOurTeam(){
 
     function createSlidesEffect(){
 
-        var glide = new Glide('.glide', {
+        let glide = new Glide('.glide', {
             type: "carousel",
             startAt: 1,
             perView: 4,
             breakpoints:{
                 560:{
-                    perView:3
+                    perView: 3
                 }
             }
         });

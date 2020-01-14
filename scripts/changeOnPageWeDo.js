@@ -23,8 +23,12 @@ export default function handlerToChangeOnPageWeDo(){
 
         const paragraphWeDoActions = document.querySelector('.paragraph-we-do-actions');
         const imgWeDoActions = document.querySelector('.image-we-do-actions');
-
-        paragraphWeDoActions.textContent = matchCardToText[event.target.className];
-        imgWeDoActions.src = matchCardToImg[event.target.className];
+        const linkLearnMore = document.querySelector('.link-learn-more');
+       
+        paragraphWeDoActions.textContent = "";
+        linkLearnMore.text = "";
+        setTimeout( () => imgWeDoActions.src = matchCardToImg[event.target.className] , 200);
+        setTimeout( () => linkLearnMore.text = "learn more" , 300);
+        setTimeout( () => paragraphWeDoActions.textContent = matchCardToText[event.target.className] , 400);
     }
 }
