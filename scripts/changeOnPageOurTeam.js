@@ -15,12 +15,39 @@ export default function handlerOnPageOurTeam(){
     let previousViewPhotosTeam = sourcePhotosTeam.concat();
 
     const arrayOfButton = [buttonPrev, buttonNext];
+    
+    //arrayOfButton.forEach((item) => item.addEventListener("click", listenerButtonsSlides));
+    footerPageOurTeam.addEventListener('mouseenter', listenerMouseOverFooter);
+    footerPageOurTeam.addEventListener('mouseleave', listenerMouseOutFooter);
+    createSlidesEffect();
 
-    arrayOfButton.forEach((item) => item.addEventListener("click", listenerButtonsSlides));
+    function createSlidesEffect(){
 
-    footerPageOurTeam.addEventListener('mouseenter', listenerMouseOverFooterPageOurTeam);
-    footerPageOurTeam.addEventListener('mouseleave', listenerMouseOutFooterPageOurTeam);
+        var glide = new Glide('.glide', {
+            type: "carousel",
+            startAt: 1,
+            perView: 4,
+            breakpoints:{
+                560:{
+                    perView:3
+                }
+            }
+        });
+        glide.mount();
 
+    }
+    function listenerMouseOverFooter (){
+        const footerArrow = footerPageOurTeam.querySelector('.img-arrow');
+        footerArrow.style.transform = 'rotate(45deg)';
+        footerArrow.style.transitionDuration = '0.5s';
+        footerArrow.style.transitionProperty = 'transform';
+    }
+    function listenerMouseOutFooter (){
+        const footerArrow = footerPageOurTeam.querySelector('.img-arrow');
+        footerArrow.style.transform = 'rotate(0deg)';
+        footerArrow.style.transitionDuration = '0.5s';
+        footerArrow.style.transitionProperty = 'transform';
+    }   
     function listenerButtonsSlides(event){
         let currentViewPhotosTeam;
         switch (event.target.className){
@@ -38,31 +65,5 @@ export default function handlerOnPageOurTeam(){
             item.src = currentViewPhotosTeam[index];
         });
         previousViewPhotosTeam = currentViewPhotosTeam.concat();
-    }
-
-    function listenerMouseOverFooterPageOurTeam (){
-        const footerArrow = footerPageOurTeam.querySelector('.img-arrow');
-        footerArrow.style.transform = 'rotate(45deg)';
-        footerArrow.style.transitionDuration = '0.5s';
-        footerArrow.style.transitionProperty = 'transform';
-        
-        //changeBackgroundFooter("0vw");
-    }
-
-    function listenerMouseOutFooterPageOurTeam (){
-        const footerArrow = footerPageOurTeam.querySelector('.img-arrow');
-        footerArrow.style.transform = 'rotate(0deg)';
-        footerArrow.style.transitionDuration = '0.5s';
-        footerArrow.style.transitionProperty = 'transform';
-        
-        //changeBackgroundFooter("100vw");
-    }   
-
-    function changeBackgroundFooter(width){
-        const containerBackgroundFooter = pageOurTeam.querySelector('.container-background-footer');
-
-        TweenLite.to(containerBackgroundFooter, 1, {
-            left: width,
-        });
     }
 }
